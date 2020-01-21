@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<head>
+    <Title>
+        Addition
+    </Title>
+</head>
+
+<body>
+    <form name='add'>
+        Number 1 <br>
+        <input type="number" name="num1">
+        <br>
+        Number 2 <br>
+        <input type="number" name="num2">
+        <br>
+        <button type="button" onclick="document.getElementById('result').innerHTML = addition(this.form)">Add</button>
+      
+
+        <p id="result"></p>
+
+
+        <script language="javascript">
+
+
+            function addition(form) {
+                sum = Number(add.num1.value) + Number(add.num2.value)
+                return sum
+            }
+
+        </script>
+
+    </form>
+</body>

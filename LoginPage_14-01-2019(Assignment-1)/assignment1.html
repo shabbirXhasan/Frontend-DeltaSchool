@@ -1,0 +1,70 @@
+<html>
+
+<head>
+    <title>
+        Assignment Login Page
+    </title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <h1>
+        Assignment Login Page
+    </h1>
+    <form name="login" class="form-group">
+
+        <div>
+            Email <br>
+            <input type="email" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" name="userid" required /> <br>
+           
+        </div>
+
+       
+        <div>
+            Password <br>
+            <input type="password" name="pwd" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" required /> <br>
+        </div>
+        <input class="btn btn-primary" type="button" onclick="check(this.form)" value="Login" />
+        <input class="btn btn-primary" type="reset" value="Cancel" />
+    </form>
+    <script language="javascript">
+
+        function validateEmail(elementValue) {
+            var emailPattern = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+            return emailPattern.test(elementValue);
+        }
+
+        function check(form) {
+
+            if (validateEmail(form.userid.value) == false && form.userid.value == "") {
+                alert("Please enter valid email")
+            }
+
+            else if (form.pwd.value == "") {
+                alert("password can't be empty")
+            }
+
+            else if (form.userid.value != "" && form.pwd.value != "") {
+
+                if (validateEmail(form.userid.value) == false && form.pwd.valu != "") {
+                    alert("Please enter valid email")
+                }
+
+                else if (form.userid.value == "abc@user.com" && form.pwd.value == "password1") {
+                    console.log(validateEmail(form.userid.value))
+                    window.open('success.html')
+
+                }
+                else {
+                    alert("Wrong email or password")
+                }
+            }
+
+            else {
+                alert("Please enter correct email or password")
+            }
+        }
+    </script>
+</body>
+
+</html>

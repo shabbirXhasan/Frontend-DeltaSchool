@@ -1,0 +1,33 @@
+body{
+    background-color: #525252;
+}
+h3{
+	color: red;
+}
+.centered-form{
+	vertical-align: middle;
+}
+
+.centered-form .panel{
+	background: rgba(255, 255, 255, 0.8);
+	vertical-align: middle;
+	outline: thick;
+	/* box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px; */
+}
+
+p:hover{
+	color:blue;
+}
+
+
+
+.formArea{
+	outline: thick;
+}
+input:hover{
+	color: red;
+}
+
+reg:{
+
+}

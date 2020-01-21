@@ -1,0 +1,31 @@
+
+
+<head>
+    <title>Checking rest</title>
+</head>
+
+<body>
+    
+<script>
+    var url = 'https://reqres.in/api/users'
+    fetch(url)
+    .then(res => res.json())
+    .then(res => {
+    var data = res.data
+    console.log(data)
+
+
+
+
+
+
+
+    var aa = data[0].email
+    var cc = data[2].first_name
+    console.log(aa)
+    console.log(cc)
+    
+});
+
+</script>
+</body>
